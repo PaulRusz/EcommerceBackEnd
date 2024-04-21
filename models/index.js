@@ -25,9 +25,9 @@ Product.belongsToMany(Tag, {
 
 // Tags belongToMany Products (through ProductTag)
 // Tag belongs to many Product models.
-Tag.belongsToMany(ProductTag, {
+Tag.belongsToMany(Product, {
   through: {
-    model: Product,
+    model: ProductTag,
     unique: true,
   }
 })
